@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This program is part of the DOXEL project <[http://doxel.org](http://doxel.org)>.
+# Copyright (c) 2015-2017 ALSENET SA - http://www.alsenet.com
+# Author: <luc.deschenaux@freesurf.ch>
+# This program is licensed under the terms of the
+# GNU Affero General Public License v3 (http://www.gnu.org/licenses/agpl.html)
+# (GNU AGPL).
+
+IMAGE=potree_converter-build
+THIS=$(basename $0)
+usage() {
+cat << EOF
+NAME
+       $THIS - run command $THIS in a $IMAGE docker container
+
+SYNOPSIS
+       [DOCKER_OPTIONS="--name=example"] $THIS COMMAND [ARG ...]
+
+DESCRIPTION
+       Run command $THIS in a $IMAGE docker container.
+
+       The defaults docker parameters ("-v /mnt:/mnt -it --rm=true") can
+       be overriden with the DOCKER_DEFAULTS environment variable.
+
+       You can supply additional parameters using the DOCKER_OPTIONS
+       environment variable.
+
+EOF
+exit 1
+}
+
+[ "$1" = '-h' -o "$1" = '--help' ] && usage
+
+DOCKER_DEFAULTS=${DOCKER_DEFAULTS:-"-v /mnt:/mnt -it --rm=true"}
+docker run $DOCKER_DEFAULTS $DOCKER_OPTIONS $IMAGE $THIS $@
