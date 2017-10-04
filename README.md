@@ -3,12 +3,12 @@
 ## License
 
 This program is part of the DOXEL project <[http://doxel.org](http://doxel.org)>.
-Copyright (c) 2015-2017 ALSENET SA - http://www.alsenet.com
-This program is licensed under the terms of the
-GNU Affero General Public License v3 (http://www.gnu.org/licenses/agpl.html)
-(GNU AGPL).
 
-## About 
+Copyright (c) 2015-2017 ALSENET SA - http://www.alsenet.com
+
+This program is licensed under the terms of the [GNU Affero General Public License v3](http://www.gnu.org/licenses/agpl.html) (GNU AGPL).
+
+## About
 
 This docker image is intended for building PotreeConverter from source and for testing.
 
@@ -42,4 +42,3 @@ For example you can run:
 ```
 DOCKER_OPTIONS="--cpus=2" PotreeConverter -p potree -o /mnt/workdir/potree /mnt/workdir/pointcloud.ply
 ```
-
