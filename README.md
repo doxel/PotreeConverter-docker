@@ -17,7 +17,7 @@ A second container (potree_converter-bin) should be built using the resulting bi
 ## Install
 
 ```
-git clone https://github.org/doxel/potreeConverter-build
+git clone https://github.org/doxel/PotreeConverter-build
 cd potreeConverter-build
 make && sudo make install
 ```
