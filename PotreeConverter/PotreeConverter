@@ -1,4 +1,0 @@
-#!/bin/bash
-
-WORKDIR=$(dirname $0)
-LD_LIBRARY_PATH=$WORKDIR/lib $WORKDIR/PotreeConverter.bin $@
