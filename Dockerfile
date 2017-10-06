@@ -22,7 +22,7 @@ RUN git clone \
    -b master \
    https://github.com/m-schuetz/LAStools.git \
  && cd LAStools \
- && git checkout 8065ce39d50d09907691b5feda0267279428e586 . \
+ && git checkout 8065ce39d50d09907691b5feda0267279428e586 \
  && cd LASzip \
  && mkdir build \
  && cd build \
@@ -35,7 +35,7 @@ RUN git clone \
    --recursive \
    https://github.com/potree/PotreeConverter.git \
  && cd PotreeConverter \
- && git checkout b8c8df7914aa082ebd399798b8171ba96014bd17 . \
+ && git checkout b8c8df7914aa082ebd399798b8171ba96014bd17 \
  && mkdir build \
  && cd build \
  && cmake \
