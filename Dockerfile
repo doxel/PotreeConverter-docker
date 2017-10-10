@@ -48,7 +48,7 @@ RUN git clone \
 # copy our page template
 COPY resources /home/$user/src/PotreeConverter/build/PotreeConverter/resources
 
-WORKDIR /home/$user
+WORKDIR /home/$user/src/PotreeConverter/build/PotreeConverter/
 ENV PATH ${PATH}:/home/$user/src/PotreeConverter/build/PotreeConverter/
 
 # dont use login shell to preserve PATH
